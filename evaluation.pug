@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+   meta(charset='utf=8')
+   title Time_Feedback_evaluation
+  body
+    h1
+     a(href='/CYT') Time_Feedback_evaluation
+    p 입력한 값들에 대한 평가를 받아보세요. 선택한 기간에 대한 평가를 제공합니다.
+    h2
+      a(href='/CYT/input') Input
+    h2
+      a(href='/CYT/eval') Evaluation
+    p
+    | 원하는 날짜로부터 원하는 일수만큼 평가를 받기 위해서는 아래의 두 칸을 채워주세요.
+    | 중간에 기록이 없는 날짜가 있을시 올바른 결과가 나오지 않습니다.
+    form(action='/CYT/eval' accept-charset='utf-8' method='post')
+      br
+      input(type='text' name='P1' placeholder='ex)20221211')
+      br
+      input(type='text' name='P2' placeholder='ex)20')
+      br
+      input(type='submit')
+    ul
+       li
+         p Sleep 평균
+         = Result_sleep
+       li
+         p Eat 평균
+         = Result_eat
+       li
+        p selfdevelopment 평균
+        = Result_selfdevelopment
+       li
+        p hobby 평균
+        = Result_hobby
+       li
+        p rest 평균
+        = Result_rest
+       li
+        p human_relationship 평균
+        = Result_human_relationship
+       li
+        p exercise 평균
+        = Result_exercise

@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Time_Feedback_Input
+  body
+    h1
+     a(href='/CYT') Time_Feedback_Input
+    p 이 프로그램은 하루의 시간을 7가지 항목을 나누어서 분석합니다. 오늘의 날짜와 각 항목을 입력하고, 제출 버튼을 누르세요.
+    h2
+     a(href='/CYT/input') Input
+    h2
+     a(href='/CYT/eval') Evaluation
+
+    form(action='/CYT/input' accept-charset='utf-8' method='post')
+     fieldset(style='width:300; height:500')
+      legend 각 항목에 대한 시간입력
+      br
+      input(type='text' name='date' placeholder='ex)20221211')
+      br
+      input(type='text' name='sleep' placeholder='sleep')
+      br
+      input(type='text' name='eat' placeholder='eat')
+      br
+      input(type='text' name='selfdevelopment' placeholder='selfdevelopment')
+      br
+      input(type='text' name='hobby' placeholder='hobby')
+      br
+      input(type='text' name='rest' placeholder='rest')
+      br
+      input(type='text' name='human_relationship' placeholder='human_relationship')
+      br
+      input(type='text' name='exercise' placeholder='exercise')
+      br
+      input(type='submit')
